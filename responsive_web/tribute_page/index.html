@@ -14,10 +14,13 @@
 
         img {
             max-width: 100%;
+            border-radius: 10px;
+            display: block;
         }
 
         figure {
             display: table;
+            margin: 16px;
         }
 
         #container {
@@ -26,7 +29,8 @@
             grid-template-columns: auto;
             grid-template-areas:
                 "title image"
-                "bio image";
+                "bio image"
+                "wikiref wikiref";
             gap: 5px 5px;
         }
 
@@ -42,13 +46,14 @@
         #img-caption {
             display: table-caption;
             caption-side: bottom;
+            text-align: justify;
         }
 
         #title {
-            background-color:#E689E6;
+            background-color: #E689E6;
             grid-area: title;
-            justify-self:stretch;
-            align-self:center;
+            justify-self: stretch;
+            align-self: center;
             margin: 0px;
             text-align: center;
             border-radius: 10px;
@@ -64,10 +69,12 @@
         }
 
         #bio-ref {
-            background-color: blueviolet;
-        }
-        #wikipedia-ref {
-            background-color: blue;
+            grid-area: wikiref;
+            border-radius: 10px;
+            justify-self: stretch;
+            padding-left: 1em;
+            padding-right: 1em;
+            background-color: #E2CAf8;
         }
     </style>
 </head>
@@ -125,19 +132,25 @@
                         estilo
                         literario y un modelo para las artes dramáticas"</cite>.
                 </p>
-                
+
             </section>
-            
+            <section id="bio-ref">
+                <h2>Más informaci&oacute;n</h2>
+                <p>
+                Si quiere obtener más informaci&oacute;n acerca de S&eacute;neca puede consultar su <a
+                    id="tribute-link" target="_blank" href="https://es.wikipedia.org/wiki/S%C3%A9neca">biograf&iacute;a
+                    en la Wikipedia</a>.
+                </p>
+                <h2>Referencias bibliogr&aacute;ficas</h2>
+                <p>
+                Colaboradores de Wikipedia. Séneca [en línea]. Wikipedia, La enciclopedia libre, 2020 [fecha de
+                consulta: 5 de enero del 2021]. Disponible en <a
+                    href="https://es.wikipedia.org/w/index.php?title=S%C3%A9neca&oldid=131710009">https://es.wikipedia.org/w/index.php?title=S%C3%A9neca&oldid=131710009</a>.
+                </p>
+            </section>
         </div>
-        <section id="bio-ref">
-            <p><a id="tribute-link>" target="_blank" href="https://es.wikipedia.org/wiki/S%C3%A9neca">Biografia de
-                    S&eacute;neca en la Wikipedia</a></p>
-        </section>
-        <footer id="wikipedia-ref">
-            <p>Colaboradores de Wikipedia. Séneca [en línea]. Wikipedia, La enciclopedia libre, 2020 [fecha de consulta:
-                5 de enero del 2021]. Disponible en <https:
-                    //es.wikipedia.org/w/index.php?title=S%C3%A9neca&oldid=131710009>.</p>
-        </footer>
+
+
     </main>
 </body>
 
