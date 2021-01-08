@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        FreeCodeCamp::Responsive web::Tribute Page
+    </title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        figure {
+            display: table;
+        }
+
+        #container {
+            display: grid;
+            grid-template-rows: 0.2fr 2fr;
+            grid-template-columns: auto;
+            grid-template-areas:
+                "title image"
+                "bio image";
+            gap: 5px 5px;
+        }
+
+        #img-div {
+            background-color: #F7C5F7;
+            border-radius: 10px;
+            grid-area: image;
+            font-size: smaller;
+            justify-self: end;
+        }
+
+
+        #img-caption {
+            display: table-caption;
+            caption-side: bottom;
+        }
+
+        #title {
+            background-color:#E689E6;
+            grid-area: title;
+            justify-self:stretch;
+            align-self:center;
+            margin: 0px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        #tribute-info {
+            background-color: #B782ED;
+            grid-area: bio;
+            justify-self: start;
+            border-radius: 10px;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        #bio-ref {
+            background-color: blueviolet;
+        }
+        #wikipedia-ref {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main">
+        <div id="container">
+            <h1 id="title">Lucio Anneo S&eacute;neca</h1>
+            <div id="img-div">
+                <figure>
+                    <img id="image" src="./seneca.jpeg" alt="Estatua de S&eacute;neca en C&oacute;rdoba">
+                    <figcaption id="img-caption">
+                        Estatua de S&eacute;neca en C&oacute;rdoba, su ciudad natal, junto a la puerta de
+                        Almod&oacute;var.
+                    </figcaption>
+                </figure>
+            </div>
+            <section id="tribute-info">
+                <p>
+                    Lucio Anneo Séneca (Corduba, 4 a. C.-Roma, 65 d. C.), llamado Séneca el Joven para distinguirlo de
+                    su
+                    padre, fue un filósofo, político, orador y escritor romano conocido por sus obras de carácter moral.
+                    Hijo del orador Marco Anneo Séneca, fue cuestor, pretor, senador y cónsul sufecto durante los
+                    gobiernos
+                    de Tiberio, Calígula, Claudio y Nerón, además de tutor y consejero del emperador Nerón. Su papel de
+                    tutor durante la infancia de Nerón es representado en la famosa obra de teatro Britannicus de
+                    Racine.
+                </p>
+                <p>
+                    Séneca destacó como intelectual y como político. Consumado orador, fue una figura predominante de la
+                    política romana durante los reinados de Claudio y Nerón, siendo uno de los senadores más admirados,
+                    influyentes y respetados. Entre los años 54 y 62, durante los primeros años del reinado de su joven
+                    pupilo Nerón, Séneca gobernó de facto el Imperio romano junto con Sexto Afranio Burro. Esto le
+                    granjeó
+                    numerosos enemigos, y se vio obligado a retirarse de la primera línea política en el año 62.
+                    Acusado,
+                    tal vez falsamente, de participar en la conjura de Pisón contra Nerón, su antiguo alumno lo condenó
+                    a
+                    muerte, y se suicidó en el año 65.
+                </p>
+                <p>
+                    Como escritor, Séneca pasó a la historia como uno de los máximos representantes del estoicismo. Su
+                    obra
+                    constituye la principal fuente escrita de filosofía estoica que se ha conservado hasta la
+                    actualidad.
+                    Abarca tanto obras de teatro como diálogos filosóficos, tratados de filosofía natural, consolaciones
+                    y
+                    cartas. Usando un estilo marcadamente retórico, accesible y alejado de tecnicismos, delineó las
+                    principales características del estoicismo tardío, del que junto con Epícteto y Marco Aurelio está
+                    considerado su máximo exponente.
+                </p>
+                <p>
+                    La influencia de Séneca en generaciones posteriores fue inmensa. Durante el Renacimiento fue
+                    <cite>"admirado y venerado como un oráculo de edificación moral, incluso cristiana; un maestro de
+                        estilo
+                        literario y un modelo para las artes dramáticas"</cite>.
+                </p>
+                
+            </section>
+            
+        </div>
+        <section id="bio-ref">
+            <p><a id="tribute-link>" target="_blank" href="https://es.wikipedia.org/wiki/S%C3%A9neca">Biografia de
+                    S&eacute;neca en la Wikipedia</a></p>
+        </section>
+        <footer id="wikipedia-ref">
+            <p>Colaboradores de Wikipedia. Séneca [en línea]. Wikipedia, La enciclopedia libre, 2020 [fecha de consulta:
+                5 de enero del 2021]. Disponible en <https:
+                    //es.wikipedia.org/w/index.php?title=S%C3%A9neca&oldid=131710009>.</p>
+        </footer>
+    </main>
+</body>
+
+</html>
