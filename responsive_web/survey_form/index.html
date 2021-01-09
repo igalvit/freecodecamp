@@ -6,11 +6,76 @@
         FreeCodeCamp::Responsive web::Survey Form
     </title>
     <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url("bg.jpg");
+            background-size: cover;
+        }
+
+        label {
+            display: block;
+            font-size: 1em;
+        }
+
+        .id-input,
+        #dropdown {
+            width: 100%;
+            border: 0;
+            border-radius: 5px;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            min-height: 2em;
+            font-size: 1em;
+        }
+
         #container {
             display: flex;
             flex-direction: column;
             padding: 1em;
+            align-items: center;
+            
         }
+
+        #survey-form {
+            border-radius: 10px;
+            background-color: cornflowerblue;
+        }
+
+        #id-block,
+        #dropdown-block,
+        #level-block,
+        #languages-block,
+        #comments-block,
+        #button-block {
+            display: block;
+            margin: 1em;
+        }
+
+        #id-block label {
+            font-weight: bold;
+        }
+
+        #submit-button{
+            background-color:darkseagreen;
+            width: 100%;
+            border: 0;
+            border-radius: 5px;
+            padding: 0.75em;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: bold;
+        }
+
+        #comments-textarea {
+            min-height: 5em;
+            width: 100%;
+            resize: vertical;
+            border: 0;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: inherit;
+        }
+
     </style>
 </head>
 
@@ -23,41 +88,73 @@
             </p>
         </header>
         <form id="survey-form">
-            <div>
-                <label id="name-label" for="name">Name</label>
-                <input type="text" id="name" placeholder="Insert your name..." required>
-                <label id="email-label" for="email">Email</label>
-                <input type="email" id="email" placeholder="Insert your email address..." required>
-                <label id="number-label" for="number">Age</label>
-                <input type="number" id="number" min=18 max=150 placeholder="Insert your age..." required>
+            <div id="id-block">
+                <label id="name-label" for="name">
+                    Name
+                    <input type="text" id="name" class="id-input" placeholder="Insert your name..." required>
+                </label>
+                <label id="email-label" for="email">
+                    Email
+                    <input type="email" id="email" class="id-input" placeholder="Insert your email address..." required>
+                </label>
+                <label id="number-label" for="number">
+                    Age
+                    <input type="number" id="number" class="id-input" min=18 max=150 placeholder="Insert your age..." required>
+                </label>
             </div>
-            <div>
+            <div id="dropdown-block">
                 <label id="dropdown-label" for="dropdown">Select your position role</label>
                 <select id="dropdown">
-                    <option value="support">Support</option>
-                    <option value="development">Development</option>
-                    <option value="sre">SRE</option>
-                    <option value="management">Project Management</option>
+                    <option value="support" class="dropdown-option">Support</option>
+                    <option value="development" class="dropdown-option">Development</option>
+                    <option value="sre" class="dropdown-option">SRE</option>
+                    <option value="management" class="dropdown-option">Project Management</option>
                 </select>
             </div>
-            <div>
-                <label id="level-label" for="level">Select your experience level</label>
-                <input name="level" type="radio" value="newbie">Newbie
-                <input name="level" type="radio" value="low">Low
-                <input name="level" type="radio" value="medium">Medium
-                <input name="level" type="radio" value="expert">Expert
+            <div id="level-block">
+                <p>Select your experience level</p>
+                <label for="newbie">
+                    <input name="level" type="radio" class="level-input" id ="newbie" value="newbie">
+                    Newbie
+                </label>
+                <label for="low">
+                    <input name="level" type="radio" class="level-input" value="low">
+                    Low
+                </label>
+                <label for="medium">
+                    <input name="level" type="radio" class="level-input" value="medium">
+                    Medium
+                </label>
+                <label for="expert"><input name="level" type="radio" class="level-input" value="expert">
+                    Expert
+                </label>
             </div>
-            <div>
-                <label for="languages">Select your favourite languages (check all that apply)</label>
-                <input name="languages" type="checkbox" value="c">C
-                <input name="languages" type="checkbox" value="java">Java
-                <input name="languages" type="checkbox" value="python">Python
-                <input name="languages" type="checkbox" value="rust">Rust
+            <div id="languages-block">
+                <p>Select your favourite languages (check all that apply)</p>
+                <label for="c">
+                    <input name="languages" type="checkbox" value="c">
+                    C
+                </label>
+                <label for="java">
+                    <input name="languages" type="checkbox" value="java">
+                    Java
+                </label>
+                <label for="python">
+                    <input name="languages" type="checkbox" value="python">
+                    Python
+                </label>
+                <label for="rust">
+                    <input name="languages" type="checkbox" value="rust">
+                    Rust
+                </label>
             </div>
-            <label for="comments">Additional comments</label>
-            <textarea id="comments">Enter your comments here...
-            </textarea>
-            <button type="submit" id="submit">Submit</button>
+            <div id="comments-block">
+                <p>Additional comments</p>
+                <textarea id="comments-textarea">Enter your comments here...</textarea>
+            </div>
+            <div id="button-block">
+                <button type="submit" id="submit-button">Submit</button>
+            </div>
         </form>
     </div>
 
