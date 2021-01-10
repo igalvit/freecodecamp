@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -28,6 +29,15 @@
             font-size: 1em;
         }
 
+        .question,
+        #dropdown-label {
+            font-weight: bold;
+        }
+
+        #title {
+            text-align: center;
+        }
+
         #container {
             display: flex;
             flex-direction: column;
@@ -53,6 +63,7 @@
 
         #id-block label {
             font-weight: bold;
+            padding-top: 0.5em;
         }
 
         #submit-button{
@@ -103,16 +114,18 @@
                 </label>
             </div>
             <div id="dropdown-block">
-                <label id="dropdown-label" for="dropdown">Select your position role</label>
-                <select id="dropdown">
-                    <option value="support" class="dropdown-option">Support</option>
-                    <option value="development" class="dropdown-option">Development</option>
-                    <option value="sre" class="dropdown-option">SRE</option>
-                    <option value="management" class="dropdown-option">Project Management</option>
-                </select>
+                <label id="dropdown-label" for="dropdown">Select your position role
+                    <select id="dropdown">
+                        <option value="support" class="dropdown-option">Support</option>
+                        <option value="development" class="dropdown-option">Development</option>
+                        <option value="sre" class="dropdown-option">SRE</option>
+                        <option value="management" class="dropdown-option">Project Management</option>
+                    </select>
+                </label>
+                
             </div>
             <div id="level-block">
-                <p>Select your experience level</p>
+                <p class="question">Select your experience level</p>
                 <label for="newbie">
                     <input name="level" type="radio" class="level-input" id ="newbie" value="newbie">
                     Newbie
@@ -130,7 +143,7 @@
                 </label>
             </div>
             <div id="languages-block">
-                <p>Select your favourite languages (check all that apply)</p>
+                <p class="question">Select your favourite languages (check all that apply)</p>
                 <label for="c">
                     <input name="languages" type="checkbox" value="c">
                     C
@@ -149,7 +162,7 @@
                 </label>
             </div>
             <div id="comments-block">
-                <p>Additional comments</p>
+                <p class="question">Additional comments</p>
                 <textarea id="comments-textarea">Enter your comments here...</textarea>
             </div>
             <div id="button-block">
