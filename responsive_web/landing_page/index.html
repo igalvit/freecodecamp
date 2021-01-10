@@ -7,15 +7,55 @@
         FreeCodeCamp::Responsive web::Landing Page
     </title>
     <style>
+        
+       ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            
+        }
 
+        li {
+            list-style: none;
+        }
+        
+        #container {
+            display:flexbox;
+            flex-direction: column;
+        }
     </style>
 </head>
 
 <body>
     <main>
-        
-    </main>
+        <header id="header">
+            <img id="header-img">
+            <nav id="nav-bar">
+                <ul>
+                    <li><a class="nav-link" href="#features-section">Features</a></li>
+                    <li><a class="nav-link" href="#video-section">Media</a></li>
+                    <li><a class="nav-link" href="#form-section">Subscribe</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="container">
+            <section id="features-section">
 
+            </section>
+            <section id="video-section">
+                <iframe id="video" src=""></iframe>
+            </section>
+            <section id="form-section">
+                <form id="form">
+                    <input id="email" type="email" placeholder="Insert your email address...">
+                    <input id="submit" type="submit">
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>This landing page was made only for learning purposes.</p>
+    </footer>
 </body>
 
 </html>
