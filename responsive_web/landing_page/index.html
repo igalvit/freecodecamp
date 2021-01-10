@@ -7,21 +7,110 @@
         FreeCodeCamp::Responsive web::Landing Page
     </title>
     <style>
-        
-       ul {
+        body {
+            font-family: monospace;   
+            background-color:#eee;
+            color: black;
+        }
+
+        a:link {
+            color: coral;
+            text-decoration: none;
+        }
+        a:hover {
+            color:cornflowerblue;
+        }
+
+        input {
+            font: inherit;
+            border-radius: 10px;
+            min-height: 2em;
+            min-width: 20em;
+        }
+
+        ul {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             flex-wrap: nowrap;
-            
         }
 
         li {
             list-style: none;
         }
-        
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        hr {
+            margin: 2em;
+        }
+
+        .feature-title::before {
+            content: "\25BA\ ";
+        }
+
+        .features-description {
+            margin: 1em;
+        }
+
+        #header-img {
+            float: left;
+            height: 100px;
+        }
         #container {
-            display:flexbox;
+            display: flexbox;
             flex-direction: column;
+            margin-top: 3em;
+            padding: 1em;
+            width: 100%;
+        }
+
+        #nav-bar {
+            width: 100%;
+        }
+        #title-section {
+            text-align: center;
+        }
+
+        #form-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #email {
+            font-size: 1em;
+            max-width: 20em;
+            margin-bottom: 1em;
+        }
+
+        #submit {
+            border: 0;
+            max-width: 6em;
+            padding: 0.5em;
+            background-color: coral;
+        }
+        #submit:hover {
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+        #features-section {
+            margin-bottom: 2em;
+        }
+
+        footer {
+            font-size: 1em;
         }
     </style>
 </head>
@@ -29,7 +118,7 @@
 <body>
     <main>
         <header id="header">
-            <img id="header-img">
+            <img id="header-img" src="logo.jpg">
             <nav id="nav-bar">
                 <ul>
                     <li><a class="nav-link" href="#features-section">Features</a></li>
@@ -39,22 +128,45 @@
             </nav>
         </header>
         <div id="container">
+            <section id="title-section">
+                <h1 id="title">Antique swords</h1>
+                <p>Finest antique swords store</p>
+            </section>
+        <hr>
+            <section id="form-section">
+                <form id="form">
+                    <input id="email" type="email" placeholder="Insert your email address...">
+                    <input id="submit" type="submit" alt="Subscribe" value="Subscribe">
+                </form>
+            </section>
             <section id="features-section">
+                <div id="features-list">
+                    <h2 id="features-list-title">Our offer</h2>
+                    <div class="features-element">
+                        <h3 class="feature-title">Original swords</h2>
+                            <p class="feature-description">All our swords have an autenticity certificate signed by a recognized and independent authority.</p>
+                    </div>
+                    <div class="features-element">
+                        <h3 class="feature-title">Specialized in European 15th and 16th centuries</h2>
+                            <p class="feature-description"></p>
+                    </div>
+                    <div class="features-element">
+                        <h3 class="feature-title">Garantized value increment over time</h2>
+                            <p class="feature-description">We garantized a <strong>five per cent annual increment of the value of
+                                your investment</strong> during the first five years.</p>
+                    </div>
+                </div>
 
             </section>
             <section id="video-section">
                 <iframe id="video" src=""></iframe>
             </section>
-            <section id="form-section">
-                <form id="form">
-                    <input id="email" type="email" placeholder="Insert your email address...">
-                    <input id="submit" type="submit">
-                </form>
-            </section>
+
         </div>
     </main>
     <footer>
         <p>This landing page was made only for learning purposes.</p>
+        <p>The logo used in this page comes from<a href="https://www.vecteezy.com/free-vector/logo"> Logo Vectors by Vecteezy</a>.</p>
     </footer>
 </body>
 
