@@ -13,12 +13,16 @@
             color: black;
         }
 
-        a:link {
-            color: coral;
+        a:link,
+        a:visited {
+            color: black;
             text-decoration: none;
+            font-weight: bold;
         }
         a:hover {
-            color:cornflowerblue;
+            color:coral;
+            font-weight: bolder;
+            font-size: 1.2em;
         }
 
         input {
@@ -42,24 +46,26 @@
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: 1;
+            z-index: 2;
+            background-color: wheat;
         }
 
         hr {
             margin: 2em;
         }
 
-        .feature-title::before {
+        .commitment-title::before {
             content: "\25BA\ ";
         }
 
-        .features-description {
+        .commitments-description {
             margin: 1em;
         }
 
         #header-img {
             float: left;
-            height: 100px;
+            max-height: 50px;
+            padding-top: 0.4em;
         }
         #container {
             display: flexbox;
@@ -98,17 +104,35 @@
             border: 0;
             max-width: 6em;
             padding: 0.5em;
-            background-color: coral;
+            color: black;
+            background-color: wheat;
         }
         #submit:hover {
-            background-color: cornflowerblue;
+            background-color: coral;
             color: white;
+            font-weight: bold;
         }
 
-        #features-section {
+        #commitments-section {
             margin-bottom: 2em;
         }
 
+        #video {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 0;
+            border-radius: 10px;
+
+        }
+
+        @media (max-width : 600px){
+            #video {
+                width: 75%;
+                height: 80%;
+            }
+        }
+        
         footer {
             font-size: 1em;
         }
@@ -118,11 +142,11 @@
 <body>
     <main>
         <header id="header">
-            <img id="header-img" src="logo.jpg">
+            <img id="header-img" src="logo.png">
             <nav id="nav-bar">
                 <ul>
-                    <li><a class="nav-link" href="#features-section">Features</a></li>
-                    <li><a class="nav-link" href="#video-section">Media</a></li>
+                    <li><a class="nav-link" href="#commitments-section">Commitments</a></li>
+                    <li><a class="nav-link" href="#video-section">Discover us</a></li>
                     <li><a class="nav-link" href="#form-section">Subscribe</a></li>
                 </ul>
             </nav>
@@ -134,39 +158,39 @@
             </section>
         <hr>
             <section id="form-section">
-                <form id="form">
-                    <input id="email" type="email" placeholder="Insert your email address...">
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <input id="email" type="email" name="email" placeholder="Insert your email address...">
                     <input id="submit" type="submit" alt="Subscribe" value="Subscribe">
                 </form>
             </section>
-            <section id="features-section">
-                <div id="features-list">
-                    <h2 id="features-list-title">Our offer</h2>
-                    <div class="features-element">
-                        <h3 class="feature-title">Original swords</h2>
-                            <p class="feature-description">All our swords have an autenticity certificate signed by a recognized and independent authority.</p>
+            <section id="commitments-section">
+                <div id="commitments-list">
+                    <h2 id="commitments-list-title">Our commitments</h2>
+                    <div class="commitments-element">
+                        <h3 class="commitment-title">Original swords</h2>
+                            <p class="commitment-description">All our swords have an autenticity certificate signed by a recognized and independent authority.</p>
                     </div>
-                    <div class="features-element">
-                        <h3 class="feature-title">Specialized in European 15th and 16th centuries</h2>
-                            <p class="feature-description"></p>
+                    <div class="commitments-element">
+                        <h3 class="commitment-title">Specialized in European 15th and 16th centuries</h2>
+                            <p class="commitment-description">Our specialty is the swords of the period between the 15th and 16th centuries because we understand that this is the peak of these weapons.</p>
                     </div>
-                    <div class="features-element">
-                        <h3 class="feature-title">Garantized value increment over time</h2>
-                            <p class="feature-description">We garantized a <strong>five per cent annual increment of the value of
+                    <div class="commitments-element">
+                        <h3 class="commitment-title">Garantized value increment over time</h2>
+                            <p class="commitment-description">We garantized a <strong>five per cent annual increment of the value of
                                 your investment</strong> during the first five years.</p>
                     </div>
                 </div>
 
             </section>
             <section id="video-section">
-                <iframe id="video" src=""></iframe>
+                <h2 id="video-title">Discover us</h2>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/fCPN1Oslyw0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </section>
 
         </div>
     </main>
     <footer>
         <p>This landing page was made only for learning purposes.</p>
-        <p>The logo used in this page comes from<a href="https://www.vecteezy.com/free-vector/logo"> Logo Vectors by Vecteezy</a>.</p>
     </footer>
 </body>
 
