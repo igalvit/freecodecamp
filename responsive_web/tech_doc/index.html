@@ -9,27 +9,97 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        #container {
-            display: flex;
-            flex-direction: row;
-            
+        code {
+            display: block;
+            background-color: plum;
+            position: relative;
+            width: max-content;
+            padding: 1rem;
+            border-radius: 5px;
+            white-space: pre-wrap
         }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 130px;
+            width: 150px;
+            max-width: 200px;
+        }
+
+        #navbar h1 {
+            text-align: center;
+            color: blueviolet;
+            width: 100%;
+        }
+
         #navbar ul {
             margin: 0;
+            padding: 0;
+        }
+
+        #navbar li {
+            list-style: none;
+            position: relative;
+            width: 100%;
+
+        }
+
+        #navbar ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 0px 0px 0px 5px;
+            background-color: blueviolet;
+            color: white;
+            border-top: 1px solid white;
+            width: 100%;
+        }
+
+        #navbar ul li a:hover {
+            background-color: inherit;
+            color: blueviolet;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #main-doc {
+            position: relative;
+            margin-left: 150px;
+            padding-left: 1em;
+        }
+
+        #main-doc h2 {
+            color: blueviolet;
+        }
+
+        @media(max-width:400px){
+            body {
+                font-size: 0.8em;
+            }
+            #navbar h1 {
+                font-size: 1.3em;
+            }
+            #main-doc h2 {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div id="container">
+    <!-- <div id="container"> -->
         <nav id="navbar">
             <header id="title">
                 <h1>Lorem ipsum</h1>
             </header>
             <ul>
-                <li class="nav-link" href="#section_one">Section One</li>
-                <li class="nav-link" href="#section_two">Section Two</li>
-                <li class="nav-link" href="#section_three">Section Three</li>
+                <li> <a class="nav-link"href="#section_one">Section One</a></li>
+                <li> <a class="nav-link"href="#section_two">Section Two</a></li>
+                <li> <a class="nav-link"href="#section_three">Section Three</a></li>
+                <li> <a class="nav-link"href="#section_four">Section Four</a></li>
+                <li> <a class="nav-link"href="#section_five">Section Five</a></li>
             </ul>
         </nav>
 
@@ -83,6 +153,7 @@
                         et in
                         justo. Phasellus posuere massa lectus, at ultricies orci rhoncus id.
                     </p>
+                    <code>print("Lorem ipsum");</code>
 
                 </article>
             </section>
@@ -150,10 +221,65 @@
                         Integer
                         sodales magna libero.
                     </p>
+                    <code>def greetInLorem:
+  print("Hello Lorem.")</code>
+                </article>
+            </section>
+            <section class="main-section" id="section_four">
+                <header>
+                    <h2>Section Four</h2>
+                </header>
+                <article>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in tortor id orci lobortis ornare
+                        sit amet pretium risus. Morbi maximus augue vel vestibulum iaculis. Proin luctus arcu at
+                        tristique suscipit. Vestibulum dignissim nunc vitae diam congue feugiat. Proin consectetur in
+                        mauris vel efficitur. Aliquam elit sem, cursus sed felis eu, iaculis malesuada metus. Duis vitae
+                        tortor vel nisl egestas posuere. Praesent posuere, quam vel consequat consectetur, odio ante
+                        suscipit diam, ut semper erat arcu eget magna. Aliquam sodales dui quis leo iaculis, in
+                        elementum nibh aliquet. Curabitur ut neque ac ipsum egestas condimentum. Duis tincidunt porta
+                        ex, at tincidunt est vulputate sed.
+                    </p>
+                    <code>def moreLorem(x)
+  for n in range(x):
+    print("lorem")</code>
+                    <p>
+                        Donec vulputate neque vel iaculis luctus. Nulla eu nulla vitae orci vulputate ornare id ut
+                        turpis. Phasellus eget blandit quam. Curabitur sagittis faucibus mauris scelerisque fringilla.
+                        Ut vitae leo vitae neque consectetur dictum nec eu neque. Aliquam laoreet lectus eget tempus
+                        malesuada. Nullam finibus mollis odio, sed hendrerit ipsum faucibus nec. Mauris at dolor erat.
+                        Duis ultrices nisi congue efficitur consectetur. Fusce lobortis ante sed efficitur ullamcorper.
+                        Duis et magna commodo augue consequat auctor mollis at lectus. Cras at eleifend turpis, sit amet
+                        consequat metus. Quisque ullamcorper augue vulputate semper mattis.
+                    </p>
+                    <code>lorem.find(lorem[::-1])</code>
+                </article>
+            </section>
+            <section class="main-section" id="section_five">
+                <header>
+                    <h2>Section Five</h2>
+                </header>
+                <article>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in sem a eros faucibus laoreet.
+                        Cras
+                        auctor scelerisque mauris, eu vestibulum enim. Sed mattis ante eget nulla commodo, vel tincidunt
+                        lectus elementum. Sed semper, turpis in convallis pulvinar, odio turpis dapibus arcu, quis
+                        dictum
+                        orci tellus non sem. Mauris dignissim augue eu scelerisque tincidunt. Praesent viverra sapien at
+                        ipsum convallis ullamcorper. Aenean in diam est. Nunc arcu orci, pharetra non cursus non,
+                        euismod a
+                        turpis. Nulla porta erat sem, in iaculis nisl viverra vitae. Etiam sit amet efficitur nisl, et
+                        malesuada enim. Pellentesque et purus eget lacus pretium eleifend ut at dolor. Donec est velit,
+                        venenatis ac ex nec, fermentum pulvinar ligula. Phasellus consectetur maximus mi in dictum.
+                        Integer
+                        sodales magna libero.
+                    </p>
+                    <code>lambda L: [] if L==[] else qsort([x for x in L[1:] if x< L[0]]) + L[0:1] + qsort([x for x in L[1:] if x>=L[0]])</code>
                 </article>
             </section>
         </main>
-    </div>
+    <!-- </div> -->
 
 </body>
 
