@@ -24,7 +24,8 @@ function checkCashRegister(price, cash, cid) {
     cid.forEach(element => {  //get total cash in register
         totalCash += element[1];
     });
-    totalCash = parseFloat(totalCash.toFixed(2)) //2 decimal places
+    //totalCash = parseFloat(totalCash.toFixed(2)) //2 decimal places
+    totalCash = Math.floor(totalCash * 100 /100)
 
     //function to check if currency unit can offset some change
     function cashUnit(unit, index) { //unit param-> reference cashValue obj and index param-> reference cid unit amount
